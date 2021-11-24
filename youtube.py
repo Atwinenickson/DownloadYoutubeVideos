@@ -43,7 +43,7 @@ def job():
     print(df["Downloaded"])
 
     # create excel writer object
-    writer = pd.ExcelWriter('downloaded.xlsx')
+    writer = pd.ExcelWriter('excel/downloaded.xlsx')
     # write dataframe to excel
     df["Downloaded"].to_excel(writer)
     # save the excel
@@ -60,7 +60,7 @@ def job():
     nodownloaded.columns = ['Original List', 'Downloaded List']
 
     # create excel writer object
-    writer = pd.ExcelWriter('Notdownloaded.xlsx')
+    writer = pd.ExcelWriter('excel/Notdownloaded.xlsx')
     # write dataframe to excel
     nodownloaded.to_excel(writer)
     # save the excel
