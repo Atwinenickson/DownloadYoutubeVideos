@@ -5,9 +5,14 @@ import schedule
 import time
 import numpy as np
 import os
+from ping import myping
+
+
+
+res = myping("www.youtdddddddddube.com")
 
 def job():
-    df = pd.read_excel('kabali.xlsx')
+    df = pd.read_excel('excel/kabali.xlsx')
     df=df.dropna()
     print(df)
     links = df['URL'].tolist()
@@ -62,7 +67,12 @@ def job():
     writer.save()
     print('DataFrame is written successfully to Excel File.')
 
-schedule.every().day.at("18:00").do(job)
+
+if (res is True):
+    schedule.every(10).seconds.do(job)
+    schedule.every().day.at("18:00").do(job)
+
+
 
 '''
 SCHEDULE ANY TIME YOU WANT WITH THE FOLLOWING COMMANDS
