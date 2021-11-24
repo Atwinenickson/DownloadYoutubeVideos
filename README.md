@@ -1,4 +1,3 @@
-## Header
 #  **To Run the project**
 
 ##  **Activating the virtual envt**
