@@ -9,7 +9,7 @@ from ping import myping
 
 
 
-res = myping("www.youtdddddddddube.com")
+res = myping("www.youtube.com")
 
 def job():
     df = pd.read_excel('excel/kabali.xlsx')
